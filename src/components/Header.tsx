@@ -76,7 +76,7 @@ export default function Header() {
 
         {isHome && (
           <form
-            className="md:w-1/2 2xl:w-1/3 border bg-slate-900 my-32 p-10 rounded-lg shadow space-y-6"
+            className="md:w-1/2 2xl:w-1/3  my-32 p-10 rounded-lg shadow-red-700/50 space-y-6"
             onSubmit={handleSubmit}
           >
             <div className="space-y-4">
