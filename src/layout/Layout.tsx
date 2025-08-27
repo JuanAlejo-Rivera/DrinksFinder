@@ -19,11 +19,13 @@ export default function Layout() {
         <>
             <Header />
 
-            <main className="container mx-auto py-16">
+            {/* <main className="container mx-auto py-16 bg-neutral-900 min-h-screen"> */}
+            <main className="mx-auto py-16 bg-gray-900 min-h-screen px-4">
+
                 <Outlet />
             </main>
             <Modal />
-            <Notification/>
+            <Notification />
         </>
 
     )
