@@ -24,7 +24,7 @@ export default function DrinkCard({ drink }: DrinkCardProps) {
                 <h2 className="text-2xl truncate font-bold text-white">{drink.strDrink}</h2>
                 <button
                     type="button"
-                    className="bg-amber-600 hover:bg-amber-700 mt-5 w-full p-3 font-semibold text-black text-lg rounded-lg shadow-md transition-colors"
+                    className="bg-amber-700 hover:bg-amber-800 mt-5 w-full p-3 font-semibold text-black text-lg rounded-lg shadow-md transition-colors"
                     onClick={() => selectRecipe(drink.idDrink)}
                 >
                     Ver Receta 🍸

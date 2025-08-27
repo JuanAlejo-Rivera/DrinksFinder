@@ -13,7 +13,7 @@ export default function indexPage() {
 
   return (
     <>
-      <h1 className="text-6xl font-extrabold text-amber-600">Recetas</h1>
+      <h1 className="text-6xl font-extrabold text-amber-700">Recetas</h1>
       {hasDrinks ? (
         <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 my-10 gap-10">
           {drinks.drinks.map((drink) => (

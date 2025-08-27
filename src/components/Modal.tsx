@@ -72,7 +72,7 @@ export default function Modal() {
                 />
 
                 {/* Ingredientes */}
-                <DialogTitle as="h3" className="text-amber-600 text-2xl font-bold mt-6 mb-3">
+                <DialogTitle as="h3" className="text-amber-700 text-2xl font-bold mt-6 mb-3">
                   Ingredientes y Cantidades
                 </DialogTitle>
                 {renderIngredients()}
@@ -80,7 +80,7 @@ export default function Modal() {
                 {/* Instrucciones ES */}
                 {selectedRecipe.strInstructionsES && (
                   <>
-                    <DialogTitle as="h3" className="text-amber-600 text-2xl font-bold mt-6 mb-3">
+                    <DialogTitle as="h3" className="text-amber-700 text-2xl font-bold mt-6 mb-3">
                       Instrucciones
                     </DialogTitle>
                     <p className="text-lg text-white leading-relaxed">
@@ -92,7 +92,7 @@ export default function Modal() {
                 {/* Instrucciones EN */}
                 {selectedRecipe.strInstructions && (
                   <>
-                    <DialogTitle as="h3" className="text-amber-600 text-2xl font-bold mt-6 mb-3">
+                    <DialogTitle as="h3" className="text-amber-700 text-2xl font-bold mt-6 mb-3">
                       Instructions
                     </DialogTitle>
                     <p className="text-lg text-white leading-relaxed">
