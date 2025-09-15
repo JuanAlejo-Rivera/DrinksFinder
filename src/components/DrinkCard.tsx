@@ -27,7 +27,7 @@ export default function DrinkCard({ drink }: DrinkCardProps) {
                     className="bg-amber-700 hover:bg-amber-800 mt-5 w-full p-3 font-semibold text-black text-lg rounded-lg shadow-md transition-colors"
                     onClick={() => selectRecipe(drink.idDrink)}
                 >
-                    Ver Receta 🍸
+                    Ver Receta
                 </button>
             </div>
 

@@ -50,12 +50,16 @@ export default function Header() {
   }
 
   return (
-    <header className={isHome ? 'bg-[url(/bg.jpg)] bg-center bg-cover' : 'bg-slate-800'}>
+    <header className={isHome ? 'bg-[url(/bg.png)] bg-center bg-cover' : 'bg-slate-800'}>
       <div className="mx-auto container px-5 py-16">
         <div className="flex justify-between items-center">
-          <div>
-            <img className="w-32" src="/logo.svg" alt="logotipo" />
-          </div>
+<div className="relative w-full h-24">
+  <img
+    src="/logo.png"
+    alt="logotipo"
+    className="absolute top-0 left-0 w-[350px]"
+  />
+</div>
 
           <nav className="flex gap-4">
             <NavLink
