@@ -55,11 +55,11 @@ export default function Header() {
       <div className="mx-auto container px-5 py-16">
         <div className="flex justify-between items-center">
           <div className="relative w-full h-24">
-            {/* <img
+            <img
               src="/logo.png"
               alt="logotipo_bebidas"
               className="absolute top-0 left-0 w-[350px]"
-            /> */}
+            />
           </div>
  
           <nav className="flex gap-4">
