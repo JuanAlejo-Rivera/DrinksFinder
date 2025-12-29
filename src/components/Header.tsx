@@ -50,24 +50,25 @@ export default function Header() {
   }
 
   return (
-    <header className={isHome ? 'bg-[url(/bg.png)] bg-center bg-cover' : 'bg-slate-800'}>
+    <header className={isHome ? 'bg-[url(/bg.png)] bg-center bg-cover relative' : 'bg-gradient-to-r from-slate-800 via-slate-900 to-gray-900 shadow-lg'}>
+      {isHome && <div className="absolute inset-0 bg-black/30"></div>}
       
-      <div className="mx-auto container px-5 py-16">
+      <div className="mx-auto container px-5 py-16 relative z-10">
         <div className="flex justify-between items-center">
        <div>
-            <img className="w-40" src="/logo.png" alt="logotipo" />
+            <img className="w-40 drop-shadow-2xl" src="/logo.png" alt="logotipo" />
           </div>
  
-          <nav className="flex gap-4">
+          <nav className="flex gap-6">
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-amber-700 uppercase font-bold' : 'text-white uppercase font-bold'
+                isActive ? 'text-amber-400 uppercase font-bold text-sm tracking-wider hover:text-amber-300 transition-colors duration-300' : 'text-white uppercase font-bold text-sm tracking-wider hover:text-amber-400 transition-colors duration-300'
               }
               to="/">Inicio</NavLink>
             <NavLink
               to="/favoritos"
               className={({ isActive }) =>
-                isActive ? 'text-amber-700 uppercase font-bold' : 'text-white uppercase font-bold'
+                isActive ? 'text-amber-400 uppercase font-bold text-sm tracking-wider hover:text-amber-300 transition-colors duration-300' : 'text-white uppercase font-bold text-sm tracking-wider hover:text-amber-400 transition-colors duration-300'
               }
             >Favoritos</NavLink>
           </nav>
@@ -75,34 +76,34 @@ export default function Header() {
 
         {isHome && (
           <form
-            className="md:w-1/2 2xl:w-1/3  my-32 p-10 rounded-lg shadow-red-700/50 space-y-6"
+            className="md:w-1/2 2xl:w-1/3 my-32 p-10 rounded-2xl bg-gray-900/80 backdrop-blur-lg border border-amber-500/20 shadow-2xl shadow-amber-500/10 space-y-6"
             onSubmit={handleSubmit}
           >
-            <div className="space-y-4">
+            <div className="space-y-3">
               <label htmlFor="ingredient"
-                className="block text-white uppercase font-extrabold text-lg"
+                className="block text-white uppercase font-bold text-sm tracking-wide"
               >
                 Nombre o ingredientes</label>
               <input
                 id="ingredient"
                 type="text"
                 name="ingredient"
-                className="bg-white p-3 w-full rounded-lg focus:outline-none"
+                className="bg-white/95 p-3.5 w-full rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all duration-300 text-gray-900 placeholder:text-gray-500"
                 placeholder="Nombre o Ingrediente. Ej. Vodka, Tequila, café"
                 onChange={handleChange}
                 value={searchFilters.ingredient}
               />
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               <label htmlFor="category"
-                className="block text-white uppercase font-extrabold text-lg"
+                className="block text-white uppercase font-bold text-sm tracking-wide"
               >
                 categoría</label>
               <select
                 id="category"
                 name="category"
-                className="bg-white p-3 w-full rounded-lg focus:outline-none"
+                className="bg-white/95 p-3.5 w-full rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all duration-300 text-gray-900 cursor-pointer"
                 onChange={handleChange}
                 value={searchFilters.category}
 
@@ -121,8 +122,8 @@ export default function Header() {
             <input
               type="submit"
               value='Buscar Recetas'
-              className="cursor-pointer bg-amber-700 hover:bg-amber-800
-             text-gray-00 font-extrabold w-full p-2 rounded-lg uppercase"
+              className="cursor-pointer bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600
+             text-white font-bold w-full py-3.5 rounded-xl uppercase tracking-wide shadow-lg hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300 ease-out hover:-translate-y-0.5"
             />
 
           </form>

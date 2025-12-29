@@ -18,7 +18,7 @@ export default function Layout() {
     return (
         <>
             <Header />
-            <main className="mx-auto py-16 bg-gray-800 min-h-screen px-4">
+            <main className="mx-auto py-16 bg-gradient-to-br from-gray-800 via-gray-900 to-slate-900 min-h-screen px-4">
                 <Outlet />
             </main>
             <Modal />

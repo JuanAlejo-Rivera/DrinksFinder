@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
+/* Estilos globales mejorados */
+body {
+  @apply antialiased;
+  font-feature-settings: "kern" 1;
+}
 
 .arrow {
-  @apply fixed bottom-6 right-6 p-3 rounded-full bg-gradient-to-r from-amber-500 via-amber-700 to-amber-800 text-white shadow-lg hover:scale-110 transition
+  @apply fixed bottom-6 right-6 p-3 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 ease-out backdrop-blur-sm
 }

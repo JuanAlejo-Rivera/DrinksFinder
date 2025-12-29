@@ -25,7 +25,7 @@ export default function Notification() {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-xl shadow-2xl ring-1 ring-amber-500/20 border border-amber-500/10">
                         <div className="p-4">
                             <div className="flex items-start">
                                 <div className="flex-shrink-0">
@@ -36,15 +36,15 @@ export default function Notification() {
                                     )}
                                 </div>
                                 <div className="ml-3 w-0 flex-1 pt-0.5">
-                                    <p className="text-sm font-medium text-gray-900">Notificación</p>
-                                    <p className="mt-1 text-sm text-gray-500">
+                                    <p className="text-sm font-bold text-white">Notificación</p>
+                                    <p className="mt-1 text-sm text-gray-300">
                                         {notification.text}
                                     </p>
                                 </div>
                                 <div className="ml-4 flex flex-shrink-0">
                                     <button
                                         type="button"
-                                        className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                        className="inline-flex rounded-lg bg-gray-700/50 hover:bg-gray-600/50 p-1.5 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all duration-300"
                                         onClick={hideNotification}
                                     >
                                         <span className="sr-only">Cerrar</span>

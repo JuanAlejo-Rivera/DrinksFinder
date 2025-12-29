@@ -19,13 +19,13 @@ export default function Modal() {
 
       if (ingredient && measure) {
         ingredients.push(
-          <li key={i} className="mb-1 text-white">
-            <span className="font-semibold text-white">{ingredient}</span> - {measure}
+          <li key={i} className="mb-2 text-gray-200 text-base leading-relaxed">
+            <span className="font-semibold text-amber-400">{ingredient}</span> <span className="text-gray-400">—</span> {measure}
           </li>
         )
       }
     }
-    return <ul className="list-disc pl-6">{ingredients}</ul>
+    return <ul className="space-y-1 pl-1">{ingredients}</ul>
   }
 
   return (
@@ -42,7 +42,7 @@ export default function Modal() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black/60" />
+          <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
         </TransitionChild>
 
         {/* Contenido */}
@@ -57,10 +57,10 @@ export default function Modal() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <DialogPanel className="relative transform overflow-hidden rounded-2xl bg-gray-700 px-6 py-6 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+              <DialogPanel className="relative transform overflow-hidden rounded-3xl bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-xl px-8 py-8 text-left shadow-2xl border border-amber-500/20 transition-all sm:my-8 sm:w-full sm:max-w-2xl">
                 
                 {/* Título */}
-                <DialogTitle as="h3" className="text-white text-3xl font-extrabold my-4 text-center">
+                <DialogTitle as="h3" className="text-white text-3xl font-extrabold mb-6 text-center">
                   {selectedRecipe.strDrink}
                 </DialogTitle>
 
@@ -68,11 +68,11 @@ export default function Modal() {
                 <img
                   src={selectedRecipe.strDrinkThumb}
                   alt={`Imagen de ${selectedRecipe.strDrink}`}
-                  className="mx-auto w-80 rounded-lg shadow-lg"
+                  className="mx-auto w-full max-w-md rounded-2xl shadow-2xl shadow-amber-500/10 border border-amber-500/10"
                 />
 
                 {/* Ingredientes */}
-                <DialogTitle as="h3" className="text-amber-700 text-2xl font-bold mt-6 mb-3">
+                <DialogTitle as="h3" className="text-amber-400 text-xl font-bold mt-8 mb-4">
                   Ingredientes y Cantidades
                 </DialogTitle>
                 {renderIngredients()}
@@ -80,10 +80,10 @@ export default function Modal() {
                 {/* Instrucciones ES */}
                 {selectedRecipe.strInstructionsES && (
                   <>
-                    <DialogTitle as="h3" className="text-amber-700 text-2xl font-bold mt-6 mb-3">
+                    <DialogTitle as="h3" className="text-amber-400 text-xl font-bold mt-8 mb-4">
                       Instrucciones
                     </DialogTitle>
-                    <p className="text-lg text-white leading-relaxed">
+                    <p className="text-base text-gray-200 leading-relaxed">
                       {selectedRecipe.strInstructionsES}
                     </p>
                   </>
@@ -92,30 +92,30 @@ export default function Modal() {
                 {/* Instrucciones EN */}
                 {selectedRecipe.strInstructions && (
                   <>
-                    <DialogTitle as="h3" className="text-amber-700 text-2xl font-bold mt-6 mb-3">
+                    <DialogTitle as="h3" className="text-amber-400 text-xl font-bold mt-8 mb-4">
                       Instructions
                     </DialogTitle>
-                    <p className="text-lg text-white leading-relaxed">
+                    <p className="text-base text-gray-200 leading-relaxed">
                       {selectedRecipe.strInstructions}
                     </p>
                   </>
                 )}
 
                 {/* Botones */}
-                <div className="mt-8 flex justify-between gap-4">
+                <div className="mt-10 flex flex-col sm:flex-row justify-between gap-4">
                   <button
                     type="button"
-                    className="w-full rounded-lg bg-gray-800 p-3 font-bold uppercase text-white shadow hover:bg-gray-900 transition"
+                    className="w-full rounded-xl bg-gray-700/80 hover:bg-gray-600/80 p-3.5 font-bold uppercase text-white shadow-lg hover:shadow-xl transition-all duration-300 ease-out border border-gray-600/50"
                     onClick={closeModal}
                   >
                     Cerrar
                   </button>
                   <button
                     type="button"
-                    className={`w-full rounded-lg p-3 font-bold uppercase text-white shadow transition 
+                    className={`w-full rounded-xl p-3.5 font-bold uppercase text-white shadow-lg hover:shadow-xl transition-all duration-300 ease-out
                       ${favoriteExists(selectedRecipe.idDrink) 
-                        ? 'bg-red-800 hover:bg-red-900' 
-                        : 'bg-amber-700 hover:bg-amber-800'
+                        ? 'bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 border border-red-600/50' 
+                        : 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 border border-amber-500/50'
                       }`}
                     onClick={() => {
                       handleClickFavorite(selectedRecipe)
