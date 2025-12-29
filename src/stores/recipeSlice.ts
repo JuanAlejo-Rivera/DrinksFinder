@@ -47,9 +47,14 @@ export const createRecipiesSlice: StateCreator<RecipiesSliceType> = (set) => ({
     },
     closeModal: () => {
         set({
-            modal: false,
-            selectedRecipe: {} as Recipe
+            modal: false
         })
+        // Retrasar la limpieza del selectedRecipe hasta que termine la animación (300ms)
+        setTimeout(() => {
+            set({
+                selectedRecipe: {} as Recipe
+            })
+        }, 300)
     }
 
 

@@ -59,16 +59,16 @@ export default function Header() {
             <img className="w-40 drop-shadow-2xl" src="/logo.png" alt="logotipo" />
           </div>
  
-          <nav className="flex gap-8">
+          <nav className="flex gap-6">
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-amber-400 uppercase font-extrabold text-base tracking-widest hover:text-amber-300 transition-all duration-300 hover:scale-105' : 'text-white uppercase font-bold text-base tracking-widest hover:text-amber-400 transition-all duration-300 hover:scale-105'
+                isActive ? 'text-amber-400 uppercase font-bold text-sm tracking-wide hover:text-amber-300 transition-all duration-300' : 'text-white uppercase font-semibold text-sm tracking-wide hover:text-amber-400 transition-all duration-300'
               }
               to="/">Inicio</NavLink>
             <NavLink
               to="/favoritos"
               className={({ isActive }) =>
-                isActive ? 'text-amber-400 uppercase font-extrabold text-base tracking-widest hover:text-amber-300 transition-all duration-300 hover:scale-105' : 'text-white uppercase font-bold text-base tracking-widest hover:text-amber-400 transition-all duration-300 hover:scale-105'
+                isActive ? 'text-amber-400 uppercase font-bold text-sm tracking-wide hover:text-amber-300 transition-all duration-300' : 'text-white uppercase font-semibold text-sm tracking-wide hover:text-amber-400 transition-all duration-300'
               }
             >Favoritos</NavLink>
           </nav>

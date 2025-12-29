@@ -50,12 +50,12 @@ export default function Modal() {
           <div className="flex min-h-full items-center justify-center p-4 text-center">
             <TransitionChild
               as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 scale-95"
+              enter="ease-out duration-500"
+              enterFrom="opacity-0 scale-90"
               enterTo="opacity-100 scale-100"
-              leave="ease-in duration-200"
+              leave="ease-in duration-300"
               leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
+              leaveTo="opacity-0 scale-90"
             >
               <DialogPanel className="relative transform overflow-hidden rounded-3xl bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-xl px-8 py-8 text-left shadow-2xl border border-amber-500/20 transition-all sm:my-8 sm:w-full sm:max-w-2xl">
                 

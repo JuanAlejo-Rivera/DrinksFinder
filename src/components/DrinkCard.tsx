@@ -9,7 +9,7 @@ export default function DrinkCard({ drink }: DrinkCardProps) {
     const selectRecipe = useAppStore((state) => state.selectRecipe)
 
     return (
-        <div className="group relative border border-amber-500/30 shadow-xl bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-amber-500/20 hover:border-amber-500/60 hover:-translate-y-1 transition-all duration-300 ease-out">
+        <div className="group relative border border-amber-500/30 shadow-xl bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-amber-500/20 hover:border-amber-500/60 hover:-translate-y-1 transition-all duration-300 ease-out animate-scaleIn">
 
             <div className="overflow-hidden relative">
                 <img
