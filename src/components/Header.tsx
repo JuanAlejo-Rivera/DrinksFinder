@@ -59,16 +59,16 @@ export default function Header() {
             <img className="w-40 drop-shadow-2xl" src="/logo.png" alt="logotipo" />
           </div>
  
-          <nav className="flex gap-6">
+          <nav className="flex gap-8">
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-amber-400 uppercase font-bold text-sm tracking-wider hover:text-amber-300 transition-colors duration-300' : 'text-white uppercase font-bold text-sm tracking-wider hover:text-amber-400 transition-colors duration-300'
+                isActive ? 'text-amber-400 uppercase font-extrabold text-base tracking-widest hover:text-amber-300 transition-all duration-300 hover:scale-105' : 'text-white uppercase font-bold text-base tracking-widest hover:text-amber-400 transition-all duration-300 hover:scale-105'
               }
               to="/">Inicio</NavLink>
             <NavLink
               to="/favoritos"
               className={({ isActive }) =>
-                isActive ? 'text-amber-400 uppercase font-bold text-sm tracking-wider hover:text-amber-300 transition-colors duration-300' : 'text-white uppercase font-bold text-sm tracking-wider hover:text-amber-400 transition-colors duration-300'
+                isActive ? 'text-amber-400 uppercase font-extrabold text-base tracking-widest hover:text-amber-300 transition-all duration-300 hover:scale-105' : 'text-white uppercase font-bold text-base tracking-widest hover:text-amber-400 transition-all duration-300 hover:scale-105'
               }
             >Favoritos</NavLink>
           </nav>
@@ -76,7 +76,7 @@ export default function Header() {
 
         {isHome && (
           <form
-            className="md:w-1/2 2xl:w-1/3 my-32 p-10 rounded-2xl bg-gray-900/80 backdrop-blur-lg border border-amber-500/20 shadow-2xl shadow-amber-500/10 space-y-6"
+            className="md:w-1/2 2xl:w-1/3 my-32 p-10 rounded-2xl bg-gray-900/40 backdrop-blur-xl border border-amber-500/30 shadow-2xl shadow-amber-500/20 space-y-6"
             onSubmit={handleSubmit}
           >
             <div className="space-y-3">

@@ -7,5 +7,5 @@ body {
 }
 
 .arrow {
-  @apply fixed bottom-6 right-6 p-3 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 ease-out backdrop-blur-sm
+  @apply fixed bottom-6 right-6 p-4 rounded-full bg-gradient-to-br from-amber-500/90 to-amber-600/90 backdrop-blur-md text-white shadow-2xl hover:shadow-amber-500/50 hover:scale-110 hover:rotate-6 transition-all duration-300 ease-out border border-amber-400/30 hover:from-amber-400 hover:to-amber-500
 }
